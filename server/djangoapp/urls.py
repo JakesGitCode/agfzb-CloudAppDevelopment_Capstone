@@ -1,3 +1,5 @@
+# urls.py
+
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
@@ -14,11 +16,11 @@ urlpatterns = [
     # path for registration
     path('registration/', views.registration_request, name='registration'),
 
-    # path for login
-    path('login/', views.login_request, name='login'),
+    # Updated path for login view
+    path('login/', views.login_view, name='login'),
 
-    # path for logout
-    path('logout/', views.logout_request, name='logout'),
+    # Updated path for logout view
+    path('logout/', views.logout_view, name='logout'),
 
     # path for the index view
     path('', views.get_dealerships, name='index'),
@@ -29,7 +31,10 @@ urlpatterns = [
     # path for add a review view
     path('add_review/<int:dealer_id>/', views.add_review, name='add_review'),
 
-    # path for the home view (can be updated based on your actual home page)
+    # Updated path for the home view
     path('home/', views.get_dealerships, name='home'),
+
+    # Added path for signup view
+    path('signup/', views.signup_view, name='signup'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

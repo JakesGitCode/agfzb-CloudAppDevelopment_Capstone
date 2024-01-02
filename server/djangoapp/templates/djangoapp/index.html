@@ -39,6 +39,23 @@
                 </li>
             </ul>
         </div>
+
+        <!-- Add login form -->
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Username">
+            <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+        </form>
+        
+        <!-- Add signup link -->
+        <a class="btn btn-outline-primary my-2 my-sm-0" href="{% url 'djangoapp:signup' %}">Signup</a>
+
+        <!-- Add user-specific navigation items here (to be shown after authentication) -->
+        <!-- For example, you can add a label to display user's first name or username -->
+        <!-- <span class="navbar-text">Welcome, {{ user.first_name }}</span> -->
+        <!-- And a signout button/link pointing to a signout view -->
+        <!-- <a class="btn btn-outline-danger my-2 my-sm-0" href="{% url 'djangoapp:signout' %}">Signout</a> -->
+
     </nav>
 
     <!-- Your existing content -->
